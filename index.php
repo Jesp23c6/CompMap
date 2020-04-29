@@ -17,25 +17,26 @@
 </head>
 <body>
 
-<div id="map"></div>
-
 <div id="address_container">
 
-    <form action="">
+    <form id="address_form" action="">
+        <br><br>
 
-        <input type="text" id="" name="" placeholder="Firmanavn">
+        <input type="text" id="company" name="" placeholder="Firmanavn"><br><br>
 
-        <input type="text" id="" name="" placeholder="Adresse">
+        <input type="text" id="address" name="" placeholder="Adresse"><br><br>
 
-        <input type="text" id="" name="" placeholder="Postnr">
+        <input type="text" id="post" name="" placeholder="Postnr">
 
-        <input type="text" id="" name="" placeholder="By">
+        <input type="text" id="city" name="" placeholder="By"><br><br>
 
-        <input type="submit" value="submit">
+        <input type="submit" id="submit" value="Tilføj"><br><br>
 
     </form>
 
 </div>
+
+<div id="map"></div>
 
 <script src="javascript/map.js"></script>
 

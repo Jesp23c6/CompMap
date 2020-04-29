@@ -1,3 +1,4 @@
+/* MAP AND HTML STYLING */
 html, body{
     height: 100%;
     margin: 0;
@@ -6,9 +7,10 @@ html, body{
 
 #map{
     height: 100%;
-    width: 100vw;
+    width: 100%;
 }
 
+/* ADDRESS_CONTAINER STYLING */
 #address_container{
     position: absolute;
     right: 0;
@@ -17,4 +19,33 @@ html, body{
     height: auto;
     background-color: white;
 }
-    
+
+#address_form{
+    text-align: center;
+    border-style: solid;
+}
+
+#company{
+    width: 90%;
+    border-style: solid;
+}
+
+#address{
+    width: 90%;
+    border-style: solid;
+}
+
+#post{
+    width: 34%;
+    border-style: solid;
+}
+
+#city{
+    width: 54%;
+    border-style: solid;
+}
+
+#submit{
+    width: 30%;
+    border-color: black;
+}
