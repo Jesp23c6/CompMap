@@ -17,7 +17,25 @@
 </head>
 <body>
 
-<div id="map" ></div>
+<div id="map"></div>
+
+<div id="address_container">
+
+    <form action="">
+
+        <input type="text" id="" name="" placeholder="Firmanavn">
+
+        <input type="text" id="" name="" placeholder="Adresse">
+
+        <input type="text" id="" name="" placeholder="Postnr">
+
+        <input type="text" id="" name="" placeholder="By">
+
+        <input type="submit" value="submit">
+
+    </form>
+
+</div>
 
 <script src="javascript/map.js"></script>
 

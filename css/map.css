@@ -1,11 +1,20 @@
-html, body {
+html, body{
     height: 100%;
     margin: 0;
     overflow: hidden;
 }
 
-#map {
+#map{
     height: 100%;
     width: 100vw;
 }
 
+#address_container{
+    position: absolute;
+    right: 0;
+    z-index: 1000;
+    width: auto;
+    height: auto;
+    background-color: white;
+}
+    
