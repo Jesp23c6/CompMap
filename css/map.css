@@ -21,31 +21,42 @@ html, body{
 }
 
 #address_form{
-    text-align: center;
+    text-align: right;
     border-style: solid;
+    
 }
 
 #company{
     width: 90%;
     border-style: solid;
+    margin-right: 5%;
+    margin-top: 5%;
 }
 
 #address{
     width: 90%;
     border-style: solid;
+    margin-right: 5%;
+    margin-top: 5%;
 }
 
 #post{
     width: 34%;
     border-style: solid;
+    margin-top: 5%;
 }
 
 #city{
     width: 54%;
     border-style: solid;
+    margin-right: 5%;
+    margin-top: 5%;
 }
 
 #submit{
     width: 30%;
     border-color: black;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }

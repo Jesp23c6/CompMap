@@ -20,17 +20,16 @@
 <div id="address_container">
 
     <form id="address_form" action="">
-        <br><br>
 
-        <input type="text" id="company" name="" placeholder="Firmanavn"><br><br>
+        <input type="text" id="company" name="" placeholder="Firmanavn"><br>
 
-        <input type="text" id="address" name="" placeholder="Adresse"><br><br>
+        <input type="text" id="address" name="" placeholder="Adresse"><br>
 
         <input type="text" id="post" name="" placeholder="Postnr">
 
-        <input type="text" id="city" name="" placeholder="By"><br><br>
+        <input type="text" id="city" name="" placeholder="By"><br>
 
-        <input type="submit" id="submit" value="Tilføj"><br><br>
+        <input type="submit" id="submit" value="Tilføj"><br>
 
     </form>
 
