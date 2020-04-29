@@ -6,9 +6,7 @@ var OpenStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.
         });
 OpenStreetMap.addTo(mymap);
 
-
-document.getElementById("submit").addEventListener("click", get_data);
-
+//Used to return user inputs with a console.log
 function get_data(){
 
     var company = document.getElementById("company");
