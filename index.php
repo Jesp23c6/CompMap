@@ -33,6 +33,8 @@
 
     </form>
 
+    <div id="json_test"></div>
+
 </div>
 
 <div id="map"></div>

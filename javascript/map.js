@@ -17,3 +17,14 @@ function get_data(){
     console.log(company.value + " " + address.value + " " + post.value + " " + city.value);
 
 }
+
+
+let url = 'https://nominatim.openstreetmap.org/search?q=%22Ejlskovsgade%203%205000%20denmark%22&format=json';
+
+fetch(url)
+.then(result => result.json())
+.then((print) => {
+  console.log(print);
+  //console.log(print[0].lon);
+})
+.catch(err => { throw err });
