@@ -19,7 +19,7 @@
 
 <div id="address_container">
 
-    <form id="address_form" action="#" onsubmit="return get_data();">
+    <form id="address_form" action="#" onsubmit="return getData();">
 
         <input type="text" id="company" name="" placeholder="Firmanavn"><br>
 
