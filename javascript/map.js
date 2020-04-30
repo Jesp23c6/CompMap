@@ -29,14 +29,16 @@ function getLinkJson(url){
     fetch(url)
     .then(result => result.json())
     .then(info => {
-        lon = info[0].lon,
-        lat = info[0].lat
-        console.log("lon: ", lon, ", ", "lat: ", lat);
+        // lon = info[0].lon,
+        // lat = info[0].lat
+        data = [info[0].lat, info[0].lon];
+        //console.log("lon: ", lon, ", ", "lat: ", lat);
     })
     .catch(err => { throw err });
 
+    return data;
 }
 
 var test = getLinkJson(url);
 
-console.log(lon, lat);
+console.log(test);
