@@ -21,16 +21,22 @@ function getData(){
 
 let url = 'https://nominatim.openstreetmap.org/search?q=%22Ejlskovsgade%203%205000%20denmark%22&format=json';
 
+var lon = "";
+var lat = "";
+
 function getLinkJson(url){
 
     fetch(url)
     .then(result => result.json())
-    .then((print) => {
-      console.log(print);
-      //console.log(print[0].lon);
+    .then(info => {
+        lon = info[0].lon,
+        lat = info[0].lat
+        console.log("lon: ", lon, ", ", "lat: ", lat);
     })
     .catch(err => { throw err });
 
 }
 
-getLinkJson(url);
+var test = getLinkJson(url);
+
+console.log(lon, lat);
