@@ -18,27 +18,49 @@ function getData(){
 
 }
 
+//let url = 'https://nominatim.openstreetmap.org/search?q=%22Ejlskovsgade%203%205000%20denmark%22&format=json';
 
-let url = 'https://nominatim.openstreetmap.org/search?q=%22Ejlskovsgade%203%205000%20denmark%22&format=json';
-
-var lon = "";
-var lat = "";
-
+/**
+ * 
+ * @param {*} url 
+ */
 function getLinkJson(url){
 
     fetch(url)
     .then(result => result.json())
     .then(info => {
-        // lon = info[0].lon,
-        // lat = info[0].lat
-        data = [info[0].lat, info[0].lon];
-        //console.log("lon: ", lon, ", ", "lat: ", lat);
+        lon = info[0].lon,
+        lat = info[0].lat
+
+        setMarker(lat, lon);
+
     })
     .catch(err => { throw err });
-
-    return data;
 }
 
-var test = getLinkJson(url);
+/**
+ * 
+ * @param {*} lat 
+ * @param {*} lon 
+ */
+function setMarker(lat, lon){
 
-console.log(test);
+    var marker = L.marker([lat, lon]).addTo(mymap);
+
+}
+
+
+function setUserMarker(){
+
+    var company = document.getElementById("company");
+    var address = document.getElementById("address");
+    var post = document.getElementById("post");
+    var city = document.getElementById("city");
+
+    var address_array = address.split(" ");
+
+    var url = "https://nominatim.openstreetmap.org/search?q=" + address_array[0] + address_array[1] + " " + post.value + " " + "denmark" + "%22&format=json";
+
+    console.log(url, address.value, post.value);
+
+}
