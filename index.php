@@ -1,3 +1,6 @@
+<?php 
+include("header.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,15 +22,19 @@
 
 <div id="address_container">
 
-    <form id="address_form" action="#" onsubmit="return setUserMarker();">
+    <form id="address_form" action="handler.php" onsubmit="return setUserMarker();" method="get">
 
-        <input type="text" id="company" name="" placeholder="Firmanavn"><br>
+        <input type="text" id="company" name="company" placeholder="Firmanavn"><br>
 
-        <input type="text" id="address" name="" placeholder="Adresse"><br>
+        <input type="text" id="address" name="address" placeholder="Adresse"><br>
 
-        <input type="text" id="post" name="" placeholder="Postnr">
+        <input type="text" id="post" name="post" placeholder="Postnr">
 
-        <input type="text" id="city" name="" placeholder="By"><br>
+        <input type="text" id="city" name="city" placeholder="By"><br>
+
+        <input type="hidden" id="latitude" name="latitude">
+
+        <input type="hidden" id="longtitude" name="longtitude">
 
         <input type="submit" id="submit" value="Tilføj"><br>
 

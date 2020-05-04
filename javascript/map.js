@@ -32,6 +32,9 @@ function getLinkJson(url){
         lon = info[0].lon,
         lat = info[0].lat
 
+        document.getElementById("latitude").value = lat;
+        document.getElementById("longtitude").value = lon;
+
         setMarker(lat, lon);
 
     })
