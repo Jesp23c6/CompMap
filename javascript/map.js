@@ -57,10 +57,8 @@ function setUserMarker(){
     var post = document.getElementById("post");
     var city = document.getElementById("city");
 
-    var address_array = address.split(" ");
+    var url = "https://nominatim.openstreetmap.org/search?q=" + address.value + " " + post.value + " " + "denmark" + "%22&format=json";
 
-    var url = "https://nominatim.openstreetmap.org/search?q=" + address_array[0] + address_array[1] + " " + post.value + " " + "denmark" + "%22&format=json";
-
-    console.log(url, address.value, post.value);
+    getLinkJson(url);
 
 }
