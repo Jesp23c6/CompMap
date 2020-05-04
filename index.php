@@ -32,9 +32,9 @@ include("header.php");
 
         <input type="text" id="city" name="city" placeholder="By"><br>
 
-        <input type="hidden" id="latitude" name="latitude">
+        <input type="hidden" id="latitude" name="latitude" value="0">
 
-        <input type="hidden" id="longtitude" name="longtitude">
+        <input type="hidden" id="longtitude" name="longtitude" value="0">
 
         <input type="submit" id="submit" value="Tilføj"><br>
 
