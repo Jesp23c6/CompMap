@@ -18,9 +18,9 @@ function getData(){
 
 }
 
-//let url = 'https://nominatim.openstreetmap.org/search?q=%22Ejlskovsgade%203%205000%20denmark%22&format=json';
-
 /**
+ * A function that uses a URL to get latitude and longtitude
+ * then uses setMarker()
  * 
  * @param {*} url 
  */
@@ -39,6 +39,7 @@ function getLinkJson(url){
 }
 
 /**
+ * A function that uses two parameters to create a marker on the map.
  * 
  * @param {*} lat 
  * @param {*} lon 
@@ -49,7 +50,10 @@ function setMarker(lat, lon){
 
 }
 
-
+/**
+ * A function that takes the input data from the form
+ * and uses it for an URL to grab JSON data with getLinkJson
+ */
 function setUserMarker(){
 
     var company = document.getElementById("company");
