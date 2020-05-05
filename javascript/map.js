@@ -42,6 +42,23 @@ function getLinkJson(url){
 
         setMarker(lat, lon);
 
+        // opretter en ny instans af standard klassen XMLHttpRequest. Denne klasse bruges til kommunikere med en ekstern side.
+        var xhttp = new XMLHttpRequest();
+        // her laves den function, som bliver kaldt når XMLHttpRequest har modtaget svar fra ekstern side 
+        xhttp.onreadystatechange = function(){ 
+        //Her checkes for status og readystate. this referrer til xhttp objektet.
+            if(this.readyState == 4 && this.status == 200){
+
+            //her parses den json tekst som er modtaget til et javascript objekt. (det kommer an på om du vil returnere noget fra din php side.. Men du kan også bruge xhttp.responseText til at ”debugge” hvad der sker på server-side
+            var obj = JSON.parse(xhttp.responseText); 
+        
+            }
+        };
+        // her sættes url’en og argument og værdierne til GET request
+        xhttp.open('GET', "../handler.php?latitude=" + lat + "&longtitude=" + lon, true); 
+        // her sendes request’en afsted
+        xhttp.send();
+
         console.log(lon, lat);
 
     })
@@ -81,19 +98,3 @@ function setUserMarker(){
 
 
 
-// opretter en ny instans af standard klassen XMLHttpRequest. Denne klasse bruges til kommunikere med en ekstern side.
-var xhttp = new XMLHttpRequest();
-// her laves den function, som bliver kaldt når XMLHttpRequest har modtaget svar fra ekstern side 
-xhttp.onreadystatechange = function(){ 
-    //Her checkes for status og readystate. this referrer til xhttp objektet.
-    if(this.readyState == 4 && this.status == 200){
-
-        //her parses den json tekst som er modtaget til et javascript objekt. (det kommer an på om du vil returnere noget fra din php side.. Men du kan også bruge xhttp.responseText til at ”debugge” hvad der sker på server-side
-        var obj = JSON.parse(xhttp.responseText); 
-        
-    }
-};
-// her sættes url’en og argument og værdierne til GET request
-xhttp.open('GET', "[handler.php]?latitude=" + lat + "&longtitude=" + lon, true); 
-// her sendes request’en afsted
-xhttp.send(); 

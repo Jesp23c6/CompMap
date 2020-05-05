@@ -32,10 +32,6 @@ include("header.php");
 
         <input type="text" id="city" name="city" placeholder="By"><br>
 
-        <input type="hidden" id="latitude" name="latitude" value="">
-
-        <input type="hidden" id="longtitude" name="longtitude" value="">
-
         <input type="submit" id="submit" value="Tilføj"><br>
 
     </form>
