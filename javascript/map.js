@@ -40,6 +40,10 @@ function getLinkJson(url){
 
         setMarker(lat, lon);
 
+        company = document.getElementById("company");
+        address = document.getElementById("address");
+        post = document.getElementById("post");
+
         // opretter en ny instans af standard klassen XMLHttpRequest. Denne klasse bruges til kommunikere med en ekstern side.
         var xhttp = new XMLHttpRequest();
         // her laves den function, som bliver kaldt når XMLHttpRequest har modtaget svar fra ekstern side 
@@ -51,12 +55,17 @@ function getLinkJson(url){
                 console.log(obj);
             }
         };
+
+        getURL = "handler.php?latitude=" + lat + "&longtitude=" + lon + "&company=" + company.value + "&address=" + address.value + "&post=" + post.value;
+
         // her sættes url’en og argument og værdierne til GET request
-        xhttp.open('GET', "../CompMap/handler.php?latitude=" + lat + "&longtitude=" + lon, true); 
+        xhttp.open('GET', getURL, true); 
         // her sendes request’en afsted 
         xhttp.send();
 
         console.log(lon, lat);
+
+        console.log(getURL);
 
     })
     .catch(err => { throw err });
