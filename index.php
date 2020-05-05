@@ -22,7 +22,7 @@ include("header.php");
 
 <div id="address_container">
 
-    <form id="address_form" action="handler.php" onsubmit="return setUserMarker();" method="get">
+    <form id="address_form" action="handler.php" onsubmit="setUserMarker();" method="get">
 
         <input type="text" id="company" name="company" placeholder="Firmanavn"><br>
 
@@ -32,9 +32,9 @@ include("header.php");
 
         <input type="text" id="city" name="city" placeholder="By"><br>
 
-        <input type="hidden" id="latitude" name="latitude" value="0">
+        <input type="hidden" id="latitude" name="latitude" value="">
 
-        <input type="hidden" id="longtitude" name="longtitude" value="0">
+        <input type="hidden" id="longtitude" name="longtitude" value="">
 
         <input type="submit" id="submit" value="Tilføj"><br>
 
