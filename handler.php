@@ -14,10 +14,10 @@ $user_info = array();
 
 array_push($user_info, $company_name, $company_address, $company_post, $company_lat, $company_lon);
 
-//$db->insert("firma", $user_info);
+$db->insert("firma", $user_info);
 
 //header("location: index.php");
 
-var_dump($user_info);
+// var_dump($user_info);
 
 ?>

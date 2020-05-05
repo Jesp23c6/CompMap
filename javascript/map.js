@@ -51,8 +51,8 @@ function getLinkJson(url){
             //Her checkes for status og readystate. this referrer til xhttp objektet.
             if(this.readyState == 4 && this.status == 200){
                 //her parses den json tekst som er modtaget til et javascript objekt. (det kommer an på om du vil returnere noget fra din php side.. Men du kan også bruge xhttp.responseText til at ”debugge” hvad der sker på server-side
-                var obj = JSON.parse(xhttp.responseText); 
-                console.log(obj);
+                // var obj = JSON.parse(xhttp.responseText); 
+                // console.log(obj);
             }
         };
 
