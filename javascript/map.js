@@ -62,11 +62,6 @@ function getLinkJson(url){
         xhttp.open('GET', getURL, true); 
         // her sendes request’en afsted 
         xhttp.send();
-
-        console.log(lon, lat);
-
-        console.log(getURL);
-
     })
     .catch(err => { throw err });
 }

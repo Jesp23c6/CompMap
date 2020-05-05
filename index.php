@@ -22,7 +22,7 @@ include("header.php");
 
 <div id="address_container">
 
-    <!-- <form id="address_form" onsubmit="setUserMarker();" method="get"> -->
+    <div id="address_form">
 
         <input type="text" id="company" name="company" placeholder="Firmanavn"><br>
 
@@ -34,7 +34,7 @@ include("header.php");
 
         <input type="submit" id="submit" onclick="setUserMarker();" value="Tilføj"><br>
 
-    <!-- </form> -->
+    </div>
 
     <div id="json_test"></div>
 

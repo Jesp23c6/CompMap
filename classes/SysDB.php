@@ -232,11 +232,13 @@ class SysDB{
      */
     public function insert($table_name, $data){
 
+        $sql = "";
+
+        $a_key_array = array();
+
+        $a_value_array = array();
+
         foreach($data as $key => $value){
-
-            $a_key_array = array();
-
-            $a_value_array = array();
 
             foreach($value as $a_key => $a_value){
 
@@ -259,12 +261,12 @@ class SysDB{
             $stmt = $this->conn->prepare($sql);
             
             $stmt->bind_param($types, ...$a_value_array);
-
-            $stmt->execute();
-
-            $stmt->close();
             
         }
+
+        $stmt->execute();
+
+        $stmt->close();
 
     }
 
