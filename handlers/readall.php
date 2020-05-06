@@ -1,10 +1,19 @@
 <?php
-include("header.php");
+include("../header.php");
 
 $db = new SysTem\SysDB();
 
+$query = $db->get_results("SELECT * FROM `firma` LEFT JOIN post ON firma.postnr = post.postnr");
+
+$result = array();
+
+while($row = $query->fetch_assoc()){
+    $result[] = $row;
+}
+
+print(json_encode($result));
 
 
-header("location: ../index.php");
+//header("location: ../index.php");
 
 ?>

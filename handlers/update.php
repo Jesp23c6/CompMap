@@ -1,5 +1,5 @@
 <?php
-include("header.php");
+include("../header.php");
 
 $db = new SysTem\SysDB();
 
