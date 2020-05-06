@@ -15,6 +15,6 @@ array_push($user_info, $company_name, $company_address, $company_post, $company_
 
 $result = $db->insert("firma", $user_info);
 
-header("location: index.php");
+header("location: ../index.php");
 
 ?>
