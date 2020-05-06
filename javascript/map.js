@@ -56,7 +56,7 @@ function getLinkJson(url){
             }
         };
 
-        getURL = "handler.php?latitude=" + lat + "&longtitude=" + lon + "&company=" + company.value + "&address=" + address.value + "&post=" + post.value;
+        getURL = "insert.php?latitude=" + lat + "&longtitude=" + lon + "&company=" + company.value + "&address=" + address.value + "&post=" + post.value;
 
         // her sættes url’en og argument og værdierne til GET request
         xhttp.open('GET', getURL, true); 
