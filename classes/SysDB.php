@@ -21,7 +21,7 @@ class SysDB{
         if ($this->conn->connect_error){
             die('Error connecting to the database: ' . $this->conn->connect_error);
         }
-        $this->conn->set_charset("utf-8");
+        $this->conn->set_charset("utf8mb4");
 
     }
 
@@ -218,54 +218,6 @@ class SysDB{
         }
 
     }
-
-    //  TEST METHOD //
-    /**
-     * A method that should be flexible enough that it will work with any valid SQL call.
-     * 
-     * @param   string $sql
-     * 
-     * @return  array $result
-     */
-    public function get_results_test($sql){
-
-        $query = $this->conn->query($sql);
-
-        try{
-
-            if($this->conn->error){
-
-                throw new \Exception($this->conn->error);
-    
-            }
-            else{
-
-                $stmt = $this->conn->prepare($sql);
-
-                $stmt->execute();
-
-                $result = $stmt->get_result();
-
-                echo json_encode(($result->fetch_array()));
-
-                $stmt->close();
-
-                //return $result;
-
-            }
-
-        }
-        
-        catch(\Exception $e){
-
-            echo("CAUGHT ERROR: NOGET SOM HELST.");
-
-            //var_dump($e);
-
-        }
-
-    }
-    //  TEST METHOD END //
 
     /**
      * A method for inserting data into a table.
