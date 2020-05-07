@@ -327,9 +327,13 @@ class SysDB{
 
                 $sql = $sql . $and_array_key . " = " . "?";
 
+                array_push($where_val_array, $and_array_val);
+
             }
             
         }
+
+        var_dump($sql);
 
         $types = $this->get_type($where_val_array);
 
