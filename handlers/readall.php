@@ -3,16 +3,18 @@ include("../header.php");
 
 $db = new SysTem\SysDB();
 
-$query = $db->get_results("SELECT * FROM `firma` LEFT JOIN post ON firma.postnr = post.postnr");
+$query = $db->get_results_test("SELECT * FROM `firma` LEFT JOIN post ON firma.postnr = post.postnr");
 
-$result = array();
-/*
-while($row = $query->fetch_assoc()){
-    $result[] = $row;
-}
+// while($row = $query->fetch_assoc()){
+//     $rowData;
+//     $rowData[]['id'] = $row['id'];
+//     $rowData[]['lat'] = $row['længdegrad'];
+//     $rowData[]['lng'] = $row['breddegrad'];
+//     //osv
+//     //$result[] = $rowData;
+// }
 
-print(json_encode($result));
-*/
+// echo(json_encode($rowData));
 
 var_dump($query);
 
