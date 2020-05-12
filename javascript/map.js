@@ -95,16 +95,17 @@ function setUserMarker(){
 
 }
 
+/**
+ * A function that uses a URL to get latitude and longtitude
+ * then uses setMarker() as it cycles through all the info available.
+ * 
+ * @param {*} url 
+ */
 function setCompanyMarkers(url){
 
     fetch(url)
     .then(result => result.json())
     .then(info => {
-
-        // lon = info[0].lng,
-        // lat = info[0].lat
-
-        // setMarker(lat, lon);
 
         for( var i = 0; i < info.length; i++){
 

@@ -10,7 +10,8 @@ while($row = $query->fetch_assoc()){
     $rowData->id = $row['id'];
     $rowData->lat = $row['længdegrad'];
     $rowData->lng = $row['breddegrad'];
-    //osv
+    $rowData->name = $row['firmanavn'];
+
     $result[] = $rowData;
  }
 
