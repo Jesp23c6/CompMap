@@ -107,22 +107,17 @@ function setCompanyMarkers(url){
     .then(result => result.json())
     .then(info => {
 
-        var markers = [];
 
         for( var i = 0; i < info.length; i++){
 
             lon = info[i].lng;
             lat = info[i].lat;
-
-            markers[i] = setMarker(lat, lon);
-        }
-
-        for( var a = 0; a < markers.length; a++){
-
             name = info[i].name;
             address = info[i].address;
 
-            markers[i].bindTooltip(name + "<br>" + address + "<br>",{
+            var marker = L.marker([lat, lon]).addTo(mymap);
+
+            marker.bindTooltip(name + "<br>" + address + "<br>",{
                 interactive: true, 
                 permanent: false, 
                 direction: 'top',
