@@ -117,7 +117,7 @@ function setCompanyMarkers(url){
 
             var marker = L.marker([lat, lon]).addTo(mymap);
 
-            marker.bindTooltip(name + "<br>" + address + "<br>",{
+            marker.bindTooltip("<b>" + name + "</b>" + "<br>" + address + "<br>",{
                 interactive: true, 
                 permanent: false, 
                 direction: 'top',
