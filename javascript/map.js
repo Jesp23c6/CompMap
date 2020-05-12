@@ -95,7 +95,48 @@ function setUserMarker(){
 
 }
 
+function setCompanyMarkers(url){
 
+    fetch(url)
+    .then(result => result.json())
+    .then(info => {
 
+        // lon = info[0].lng,
+        // lat = info[0].lat
 
+        // setMarker(lat, lon);
+
+        for( var i = 0; i < info.length; i++){
+
+            lon = info[i].lng;
+            lat = info[i].lat;
+
+            setMarker(lat, lon);
+
+        }
+
+        // opretter en ny instans af standard klassen XMLHttpRequest. Denne klasse bruges til kommunikere med en ekstern side.
+        var xhttp = new XMLHttpRequest();
+
+        // her laves den function, som bliver kaldt når XMLHttpRequest har modtaget svar fra ekstern side 
+        xhttp.onreadystatechange = function(){ 
+
+            //Her checkes for status og readystate. this referrer til xhttp objektet.
+            if(this.readyState == 4 && this.status == 200){
+                //her parses den json tekst som er modtaget til et javascript objekt. (det kommer an på om du vil returnere noget fra din php side.. Men du kan også bruge xhttp.responseText til at ”debugge” hvad der sker på server-side
+                // var obj = JSON.parse(xhttp.responseText); 
+                // console.log(obj);
+            }
+        };
+
+    })
+    .catch(err => { throw err });
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+    
+    setCompanyMarkers("handlers/readall.php");
+
+})
+  
 
