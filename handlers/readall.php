@@ -11,6 +11,7 @@ while($row = $query->fetch_assoc()){
     $rowData->lat = $row['længdegrad'];
     $rowData->lng = $row['breddegrad'];
     $rowData->name = $row['firmanavn'];
+    $rowData->address = $row['adresse'];
 
     $result[] = $rowData;
  }
