@@ -36,7 +36,9 @@ include("header.php");
 
     </div>
 
-    <div id="json_test"></div>
+    <div id="json_test">
+
+    </div>
 
 </div>
 

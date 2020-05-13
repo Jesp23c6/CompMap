@@ -12,6 +12,7 @@ while($row = $query->fetch_assoc()){
     $rowData->lng = $row['breddegrad'];
     $rowData->name = $row['firmanavn'];
     $rowData->address = $row['adresse'];
+    $rowData->post = $row['postnr'];
 
     $result[] = $rowData;
  }

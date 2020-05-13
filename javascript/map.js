@@ -110,12 +110,20 @@ function setCompanyMarkers(url){
 
         for( var i = 0; i < info.length; i++){
 
+            id = info[i].id;
             lon = info[i].lng;
             lat = info[i].lat;
             name = info[i].name;
             address = info[i].address;
+            post = info[i].post;
 
             var marker = L.marker([lat, lon]).addTo(mymap);
+
+            var popupContent = '<form formaction="handlers/update.php" method="get"><input type="hidden" name="id" value="' + id + '"><input type="text" name="firmanavn" value="' + name + '"><input type="text" name="adresse" value="' + address + '"><input type="text" name="postnr" value="' + post + '"><br><input type="submit" value="Rediger"></form>';
+
+            marker.bindPopup(popupContent);
+
+            //marker.bindPopup("<b>" + name + "</b><br>" + address).openPopup();
 
             marker.bindTooltip("<b>" + name + "</b>" + "<br>" + address + "<br>",{
                 interactive: true, 
@@ -144,10 +152,12 @@ function setCompanyMarkers(url){
     .catch(err => { throw err });
 }
 
+//Docblock
+
+
+//Makes sure to grab all information and put out markers when index loaded.
 document.addEventListener('DOMContentLoaded', function(){
     
     setCompanyMarkers("handlers/readall.php");
 
 })
-  
-
